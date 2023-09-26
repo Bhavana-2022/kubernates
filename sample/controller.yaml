@@ -1,0 +1,14 @@
+--- 
+apiVersion: v1 
+kind: Pod
+metadata:
+  name: bhavana-pod
+  labels:
+    bhavna: new
+spec:
+  containers:
+     - name: newcontainer
+       image: alpine
+       args:
+         - sleep
+           10s

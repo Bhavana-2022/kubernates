@@ -8,10 +8,10 @@ metadata:
 spec:
   containers:
      - name: mycontainer
-       image: mangarathi/dockerepository
+       image: nginx:1.25
        ports:
-         - containerPort: 5000
-           hostPort: 1234
+         - containerPort: 80
+           hostPort: 8080
            protocol: TCP
 
 

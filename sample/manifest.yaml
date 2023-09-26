@@ -11,7 +11,7 @@ spec:
       image: nginx
       ports: 
         - containerPort: 80
-          hostPort: 3456
+          hostPort: 8080
           protocol: TCP
   
 

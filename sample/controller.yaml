@@ -6,8 +6,11 @@ metadata:
   labels:
     bhavna: new
 spec:
+
   containers:
      - name: newcontainer
+       livenessProbe:
+         failureThreshold: 2
        image: alpine
        args:
          - sleep

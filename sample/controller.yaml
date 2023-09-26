@@ -10,6 +10,10 @@ spec:
   containers:
      - name: newcontainer
        livenessProbe:
+         exec:
+           command: 
+             - echo
+             - this is failure
          failureThreshold: 2
        image: alpine
        args:

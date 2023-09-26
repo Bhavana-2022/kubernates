@@ -12,8 +12,8 @@ spec:
        livenessProbe:
          exec:
            command: 
-             - echo
-             - this is failure
+             - sleep
+             - 5s
          failureThreshold: 2
        image: alpine
        args:

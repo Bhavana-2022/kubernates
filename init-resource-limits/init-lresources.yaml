@@ -7,7 +7,7 @@ metadata:
     app: test
 spec:
   initContainers:
-    - name: my-initContainers
+    - name: myinitContainers
       image: alpine
       command:
         - sleep

@@ -1,0 +1,49 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: mycronjob
+  labels:
+    env: test
+spec:
+  schedule: "*/2 * * * *"
+    jobTemplate:
+      metadata:
+        name: myjob
+        labels:
+          env: jobtest
+      spec:
+        backoffLimit: 2
+        template:
+          metadata:
+            name: pod
+            labels:
+          spec:
+            containers:
+              - name: podtemplate
+                image: alpine
+                command:
+                  - sleep
+                  - 15s
+                
+
+
+    
+  
+
+
+    
+    
+
+
+
+
+
+
+
+        
+        
+        
+        
+      matchLabels:
+  

@@ -7,25 +7,26 @@ metadata:
     env: test
 spec:
   schedule: "*/2 * * * *"
-    jobTemplate:
-      metadata:
-        name: myjob
-        labels:
-          env: jobtest
-      spec:
-        backoffLimit: 2
-        template:
-          metadata:
-            name: pod
-            labels:
-          spec:
-            containers:
-              - name: podtemplate
-                image: alpine
-                command:
-                  - sleep
-                  - 15s
-            restartPolicy: OnFailure 
+  jobTemplate:
+    metadata:
+      name: myjob
+      labels:
+        env: jobtest
+    spec:
+      backoffLimit: 2
+      template:
+        metadata:
+          name: pod
+          labels:
+            app: mypod
+        spec:
+          containers:
+            - name: podtemplate
+              image: alpine
+              command:
+                - sleep
+                - 15s
+          restartPolicy: OnFailure 
 
 
     

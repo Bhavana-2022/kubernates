@@ -25,7 +25,7 @@ spec:
                 command:
                   - sleep
                   - 15s
-                
+            restartPolicy: OnFailure 
 
 
     

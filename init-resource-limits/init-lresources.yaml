@@ -14,7 +14,6 @@ spec:
         - 15s
   containers:
     - name: mycontainer
-      image: nginx:1.25
       resources:
         requests:
           memory: "64Mi"
@@ -22,6 +21,7 @@ spec:
         limits:
           memory: "128Mi"
           cpu: "500m"
+       image: nginx:1.25   
        ports:
          - containerPort: 80
            hostPort: 8080

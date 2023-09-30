@@ -17,12 +17,12 @@ spec:
       labels:
     spec:
       containers:
-      name: mycontainer
-      image: nginx
-      ports:
-        - containerPort: 80
-        - hostPort: 80
-        - protocol: TCP
+        name: mycontainer
+        image: nginx:1.25
+        ports:
+          - containerPort: 80
+            hostPort: 80
+            protocol: TCP
 
     
   

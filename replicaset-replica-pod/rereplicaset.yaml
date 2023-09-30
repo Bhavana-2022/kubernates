@@ -13,8 +13,9 @@ spec:
   replicas: 3
   template:
     metadata:
-      name: myreplica
+      name: myreplicasedf
       labels:
+         name: myreplica
     spec:
       containers:
         - name: mycontainer

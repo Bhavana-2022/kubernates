@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myreplicaset
+  labels:
+    app: test
+spec:
+  minReadySeconds: 3
+  selector:
+    matchLabels:
+      name: myreplica
+  replicas: 3
+  template:
+    metadata:
+      name: myreplica
+      labels:
+    spec:
+      containers:
+      name: mycontainer
+      image: nginx
+      command:
+        - sleep
+        - 5sec
+      ports:
+        - containerPort: 80
+        - hostPort: 8080
+        - protocol: TCP
+
+    
+  
+
+      
+
+
+
+

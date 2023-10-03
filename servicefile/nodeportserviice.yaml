@@ -1,0 +1,16 @@
+---
+apiVersion:
+kind:
+metadata:
+  name: load
+  labels:
+    env: test
+spec:
+  selector:
+    name: myreplica
+  type: NodePort
+  ports:
+    - nodePort: 3000
+      port: 80
+      targetPort: 80
+      protocol: TCP

@@ -10,7 +10,7 @@ spec:
     name: myreplica
   type: NodePort
   ports:
-    - nodePort: 3000
+    - nodePort: 80
       port: 80
       targetPort: 80
       protocol: TCP

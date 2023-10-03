@@ -10,7 +10,7 @@ spec:
     type: ClusterIP
   ports:
     - targetPort: 80
-    -  protocol: TCP
+      protocol: "TCP"
 
   
  

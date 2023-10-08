@@ -32,9 +32,9 @@ spec:
           protocol: TCP
       volumeMounts:
         - name: ysp 
-          mountPath: /var/lib/username
+          mountPath: /etc/nginx/username
         - name: devops
-          mountpath: /var/lib/userpasswd 
+          mountpath: /etc/nginx/userpasswd 
   volumes:
     - name: ysp 
       configMap:

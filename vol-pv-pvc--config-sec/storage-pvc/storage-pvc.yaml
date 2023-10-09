@@ -1,0 +1,69 @@
+---
+apiVersion: storage.k8s.io/v1	
+kind: StorageClass
+metadata:
+  name: mystorage
+provisioner: ebs.csi.aws.com
+volumeBindingMode: Immediate 
+
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mypvc
+spec:
+  resources:
+    requests:
+      memory: "1Gi"
+  storageClassName: mystorage 
+
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    env: test
+spec:
+  containers:
+    - name: mycontainer
+      image: nginx:1.25
+      ports:
+        - containerPort: 80
+          hostPort: 8080
+          protocol: TCP
+      volumeMounts:
+        - name: anyname
+          mountPath: /var/lib/myuser
+  volumes: 
+    - name: anyname
+      persistentVolumeClaim:
+        claimName: mypvc
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+
+
+
+  

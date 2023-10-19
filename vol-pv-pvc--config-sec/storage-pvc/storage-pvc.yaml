@@ -37,7 +37,7 @@ spec:
       volumeMounts:
         - name: anyname
           mountPath: /var/lib/myuser
-  volumes: 
+ volumes: 
     - name: anyname
       persistentVolumeClaim:
         claimName: mypvc
